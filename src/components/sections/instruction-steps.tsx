@@ -22,7 +22,7 @@ const steps: Step[] = [
   {
     number: 3,
     title: "Complete short survey & deals",
-    subtitle: "Answer quick questions & complete required offers",
+    subtitle: "Answer quick questions & complete 3 to 5 required offers",
   },
   {
     number: 4,
