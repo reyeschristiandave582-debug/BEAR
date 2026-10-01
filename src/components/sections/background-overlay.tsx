@@ -5,27 +5,27 @@ import Image from 'next/image';
 const AnimatedBackground = () => {
   return (
     <>
-      {/* Central Mask - Spooky Vignette */}
+      {/* Light Central Radial Vignette - Clean White Center for High Readability */}
       <div 
         className="fixed inset-0 pointer-events-none z-0"
         style={{
-          background: 'radial-gradient(circle at center, rgba(18,7,31,0.92) 0%, rgba(13,5,22,0.97) 50%, rgba(8,2,14,1) 100%)'
+          background: 'radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(250,245,255,0.95) 50%, rgba(243,232,255,0.9) 100%)'
         }}
       />
 
-      {/* Valid Lucide Spooky Vector Icons */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-25 z-0">
-        <Ghost className="absolute top-16 left-3 w-6 h-6 text-purple-300 animate-rotate-slow" />
-        <Flame className="absolute top-44 left-4 w-6 h-6 text-orange-400 animate-float-spin" />
-        <Sparkles className="absolute top-28 right-4 w-6 h-6 text-amber-300 animate-twinkle" />
-        <Skull className="absolute bottom-36 left-4 w-6 h-6 text-purple-200 animate-rotate-reverse" />
-        <Bug className="absolute bottom-52 right-4 w-6 h-6 text-orange-500 animate-float-gentle" />
-        <Wand2 className="absolute top-[60%] left-2 w-6 h-6 text-amber-400 animate-rotate-slow" />
-        <Ghost className="absolute top-[40%] right-3 w-6 h-6 text-purple-300 animate-float-spin" />
+      {/* Floating Halloween Vector Icons on Sides */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-20 z-0">
+        <Ghost className="absolute top-16 left-3 w-6 h-6 text-purple-600 animate-rotate-slow" />
+        <Flame className="absolute top-44 left-4 w-6 h-6 text-orange-500 animate-float-spin" />
+        <Sparkles className="absolute top-28 right-4 w-6 h-6 text-amber-500 animate-twinkle" />
+        <Skull className="absolute bottom-36 left-4 w-6 h-6 text-purple-700 animate-rotate-reverse" />
+        <Bug className="absolute bottom-52 right-4 w-6 h-6 text-orange-600 animate-float-gentle" />
+        <Wand2 className="absolute top-[60%] left-2 w-6 h-6 text-amber-600 animate-rotate-slow" />
+        <Ghost className="absolute top-[40%] right-3 w-6 h-6 text-purple-600 animate-float-spin" />
       </div>
 
-      {/* Image Overlays */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.12] z-0">
+      {/* Edge Image Overlays */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.08] z-0">
         <Image
           src="https://i.imgur.com/PYS9voZ.png"
           alt=""
