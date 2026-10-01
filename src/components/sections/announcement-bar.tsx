@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Lock, Check, ShieldCheck, Ghost, Flame, Skull, Wand2 } from "lucide-react";
+import { Lock, Check, ShieldCheck, Ghost, Flame } from "lucide-react";
 
 interface NotificationItem {
   name: string;
@@ -19,7 +19,7 @@ const firstNames = [
 const lastInitials = ["B.", "D.", "F.", "H.", "J.", "L.", "M.", "P.", "Q.", "V.", "X.", "Z.", "K.", "N.", "R."];
 
 const actions = [
-  "just claimed a spooky $250 Build-A-Bear card!",
+  "just claimed a $250 Build-A-Bear card!",
   "just claimed a $250 Halloween voucher!",
   "just unlocked reward eligibility!",
   "just completed the review survey!",
@@ -62,66 +62,68 @@ export default function AnnouncementBar() {
 
   return (
     <>
-      {/* Top Banner Bar - Spooky Dark Purple Header */}
+      {/* Top Banner Bar - Rich Purple Header with Vibrant White/Orange Text */}
       <div 
-        className="sticky top-0 z-50 w-full bg-[#180a29] border-b border-[#f97316]/30 pb-2 px-3 sm:px-4 shadow-lg backdrop-blur-md"
-        style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 24px)" }}
+        className="sticky top-0 z-50 w-full bg-[#2d124d] border-b border-orange-500/40 pb-2.5 px-3 sm:px-4 shadow-md"
+        style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 12px)" }}
       >
         {/* Background Floating Spooky Icons */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-40">
           <Ghost 
-            className="absolute left-[3%] sm:left-[7%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-purple-300 animate-bounce" 
-            strokeWidth={1.5}
+            className="absolute left-[3%] sm:left-[7%] top-1/2 -translate-y-1/2 w-4 h-4 text-purple-300 animate-bounce" 
+            strokeWidth={2}
           />
           <Flame 
-            className="absolute right-[3%] sm:right-[7%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-orange-400 animate-pulse" 
-            strokeWidth={1.5}
+            className="absolute right-[3%] sm:right-[7%] top-1/2 -translate-y-1/2 w-4 h-4 text-orange-400 animate-pulse" 
+            strokeWidth={2}
           />
         </div>
 
         {/* Content Stack */}
-        <div className="relative z-10 flex flex-col items-center justify-center max-w-xl mx-auto space-y-0.5">
+        <div className="relative z-10 flex flex-col items-center justify-center max-w-xl mx-auto space-y-1">
+          {/* Main Security Headline */}
           <div className="flex items-center justify-center gap-1.5 w-full text-center">
-            <Lock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-orange-400 shrink-0 -mt-0.5 animate-pulse" />
-            <p className="text-white text-[9px] xs:text-[10px] sm:text-[11px] font-bold tracking-tight leading-none">
+            <Lock className="w-3.5 h-3.5 text-orange-400 shrink-0" strokeWidth={2.5} />
+            <p className="text-white text-[11px] xs:text-[12px] sm:text-[13px] font-bold tracking-tight leading-none">
               256-Bit SSL Secured &bull; Over 1,400+ verified today
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-1.5 text-purple-200/90">
-            <span className="text-[7.5px] xs:text-[8px] sm:text-[8.5px] uppercase tracking-wider font-semibold text-orange-300">
+          {/* Subtext Badges */}
+          <div className="flex items-center justify-center gap-2 text-white/90">
+            <span className="text-[8.5px] xs:text-[9px] sm:text-[9.5px] uppercase tracking-wider font-extrabold text-orange-300">
               SECURE ELIGIBILITY CHECK
             </span>
-            <span className="text-orange-400/50 text-[7.5px]">&bull;</span>
-            <div className="flex items-center gap-1 text-[7.5px] xs:text-[8px] sm:text-[8.5px] font-semibold text-purple-100">
-              <ShieldCheck className="w-2.5 h-2.5 text-emerald-400" strokeWidth={2.5} />
+            <span className="text-orange-400/60 text-[9px]">&bull;</span>
+            <div className="flex items-center gap-1 text-[8.5px] xs:text-[9px] sm:text-[9.5px] font-extrabold text-emerald-300">
+              <ShieldCheck className="w-3 h-3 text-emerald-400" strokeWidth={2.5} />
               <span className="uppercase tracking-wider">PRIVACY PROTECTED</span>
             </div>
           </div>
         </div>
 
-        {/* Glowing Orange Line */}
-        <div className="absolute bottom-0 left-0 h-[1.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent w-full opacity-80 overflow-hidden">
-          <div className="absolute inset-0 bg-orange-300/60 animate-shine"></div>
+        {/* Bottom Orange Accent Line */}
+        <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent w-full opacity-90 overflow-hidden">
+          <div className="absolute inset-0 bg-orange-300 animate-shine"></div>
         </div>
       </div>
 
       {/* Floating Social Proof Toast */}
       {currentNotif && (
         <div
-          className={`fixed top-14 left-3 right-3 sm:left-4 sm:right-auto z-[9999] max-w-[340px] mx-auto sm:mx-0 flex items-center gap-2 rounded-full border border-purple-500/30 bg-[#12071f]/95 text-white backdrop-blur-md px-3 py-1.5 shadow-xl overflow-hidden transition-all duration-300 ease-in-out pointer-events-none ${
+          className={`fixed top-16 left-3 right-3 sm:left-4 sm:right-auto z-[9999] max-w-[350px] mx-auto sm:mx-0 flex items-center gap-2.5 rounded-full border border-purple-300 bg-[#2d124d] text-white px-3.5 py-2 shadow-2xl transition-all duration-300 ease-in-out pointer-events-none ${
             isVisible
               ? "translate-y-0 opacity-100"
               : "-translate-y-3 opacity-0"
           }`}
         >
-          <div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-orange-500 text-slate-950">
-            <Ghost className="w-2.5 h-2.5" strokeWidth={2.5} />
+          <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-500 text-slate-950">
+            <Check className="w-3 h-3 text-slate-950" strokeWidth={3} />
           </div>
 
-          <div className="text-[9.5px] sm:text-[10.5px] text-purple-100 truncate leading-tight">
-            <span className="font-bold text-orange-300">{currentNotif.name} </span>
-            <span className="text-purple-200/80">{currentNotif.action}</span>
+          <div className="text-[10px] sm:text-[11px] text-white truncate leading-tight">
+            <span className="font-extrabold text-orange-300">{currentNotif.name} </span>
+            <span className="text-purple-100">{currentNotif.action}</span>
           </div>
         </div>
       )}
