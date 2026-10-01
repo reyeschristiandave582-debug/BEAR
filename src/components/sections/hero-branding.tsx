@@ -61,8 +61,8 @@ const HeroBranding = () => {
         <div className="flex flex-col items-center gap-0.5 px-2">
         <div className="relative">
             <h1 className="text-[22px] md:text-[28px] font-extrabold leading-tight tracking-tight flex items-center justify-center gap-x-2 flex-wrap font-poppins">
-            <span className="text-[#005dab]">Unlock</span>
-            <span className="text-[#e22028]">Build-A-Bear</span>
+            <span className="text-[#0055A5]">Unlock</span>
+            <span className="text-[#0055A5]">Build-A-Bear</span>
             <div className="flex items-center -ml-1">
               <Gift className="w-6.0 h-6.0 text-[#000001] fill-transparent" />
             </div>
