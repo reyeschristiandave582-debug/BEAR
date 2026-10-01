@@ -45,7 +45,7 @@ const HeroBranding = () => {
             <div className="relative z-10 w-[240px] sm:w-[320px] mx-auto transition-transform duration-500 group-hover:scale-105">
               <img 
                 src="https://i.imgur.com/VmyW8xx.jpeg" 
-                alt="T-Mobile $500 Gift Card" 
+                alt="T-Mobile $250 Gift Card" 
                 className="w-full h-auto"
               />
               
@@ -62,7 +62,7 @@ const HeroBranding = () => {
         <div className="relative">
             <h1 className="text-[22px] md:text-[28px] font-extrabold leading-tight tracking-tight flex items-center justify-center gap-x-2 flex-wrap font-poppins">
             <span className="text-[#005dab]">Unlock</span>
-            <span className="text-[#e22028]">Costco Rewards</span>
+            <span className="text-[#e22028]">Build-A-Bear Rewards</span>
             <div className="flex items-center -ml-1">
               <Gift className="w-6.0 h-6.0 text-[#000001] fill-transparent" />
             </div>
@@ -73,7 +73,7 @@ const HeroBranding = () => {
         <div className="flex items-center justify-center gap-2 w-full text-center">
           <Sparkles className="w-3.5 h-3.5 text-[#ffc220] shrink-0 animate-sparkle" />
           <p className="text-[13px] sm:text-sm md:text-[15px] text-[#0e100f]/90 font-medium leading-relaxed whitespace-nowrap font-poppins">
-            Here&apos;s how to qualify for a <span className="text-[#000001] font-bold">$750 gift card</span>
+            Here&apos;s how to qualify for a <span className="text-[#000001] font-bold">$250 gift card</span>
           </p>
           <Sparkles className="w-3.5 h-3.5 text-[#ffc220] shrink-0 animate-sparkle" />
         </div>
