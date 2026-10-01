@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Lock, Check, ShieldCheck, Ghost, Pumpkin, Skull, Spider, Wand2 } from "lucide-react";
+import { Lock, Check, ShieldCheck, Ghost, Flame, Skull, Wand2 } from "lucide-react";
 
 interface NotificationItem {
   name: string;
@@ -62,18 +62,18 @@ export default function AnnouncementBar() {
 
   return (
     <>
-      {/* Top Banner Bar - Spooky Dark Purple Header with Pumpkin Orange Accents */}
+      {/* Top Banner Bar - Spooky Dark Purple Header */}
       <div 
         className="sticky top-0 z-50 w-full bg-[#180a29] border-b border-[#f97316]/30 pb-2 px-3 sm:px-4 shadow-lg backdrop-blur-md"
         style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 24px)" }}
       >
-        {/* Spooky Background Floating Icons (Ghost & Spiders) */}
+        {/* Background Floating Spooky Icons */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
           <Ghost 
             className="absolute left-[3%] sm:left-[7%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-purple-300 animate-bounce" 
             strokeWidth={1.5}
           />
-          <Spider 
+          <Flame 
             className="absolute right-[3%] sm:right-[7%] top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-orange-400 animate-pulse" 
             strokeWidth={1.5}
           />
@@ -81,15 +81,13 @@ export default function AnnouncementBar() {
 
         {/* Content Stack */}
         <div className="relative z-10 flex flex-col items-center justify-center max-w-xl mx-auto space-y-0.5">
-          {/* Headline with Pumpkin Icon */}
           <div className="flex items-center justify-center gap-1.5 w-full text-center">
-            <Pumpkin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-orange-400 shrink-0 -mt-0.5 animate-pulse" />
+            <Lock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-orange-400 shrink-0 -mt-0.5 animate-pulse" />
             <p className="text-white text-[9px] xs:text-[10px] sm:text-[11px] font-bold tracking-tight leading-none">
               256-Bit SSL Secured &bull; Over 1,400+ verified today
             </p>
           </div>
 
-          {/* Subtext Security Badges with Magic Wand / Lock */}
           <div className="flex items-center justify-center gap-1.5 text-purple-200/90">
             <span className="text-[7.5px] xs:text-[8px] sm:text-[8.5px] uppercase tracking-wider font-semibold text-orange-300">
               SECURE ELIGIBILITY CHECK
@@ -102,13 +100,13 @@ export default function AnnouncementBar() {
           </div>
         </div>
 
-        {/* Glowing Orange Shimmer Line */}
+        {/* Glowing Orange Line */}
         <div className="absolute bottom-0 left-0 h-[1.5px] bg-gradient-to-r from-transparent via-orange-500 to-transparent w-full opacity-80 overflow-hidden">
           <div className="absolute inset-0 bg-orange-300/60 animate-shine"></div>
         </div>
       </div>
 
-      {/* Floating Social Proof Toast - Spooky Theme */}
+      {/* Floating Social Proof Toast */}
       {currentNotif && (
         <div
           className={`fixed top-14 left-3 right-3 sm:left-4 sm:right-auto z-[9999] max-w-[340px] mx-auto sm:mx-0 flex items-center gap-2 rounded-full border border-purple-500/30 bg-[#12071f]/95 text-white backdrop-blur-md px-3 py-1.5 shadow-xl overflow-hidden transition-all duration-300 ease-in-out pointer-events-none ${
