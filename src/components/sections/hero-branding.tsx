@@ -23,7 +23,7 @@ const HeroBranding = () => {
           {[...Array(10)].map((_, i) => (
             <div key={i} className="flex items-center mx-4">
               <img 
-                src="https://i.imgur.com/PYS9voZ.png" 
+                src="https://i.imgur.com/OzrE6zh.png" 
                 alt="Build-A-Bear Workshop Logo" 
                 className="h-8 sm:h-10 w-auto object-contain"
               />
