@@ -8,19 +8,20 @@ interface NotificationItem {
   action: string;
 }
 
+// Updated dataset with diverse names distinct from standard demo lists
 const firstNames = [
-  "Liam", "Emma", "Noah", "Olivia", "William", "Ava", "James", "Isabella", "Oliver", "Sophia",
-  "Elijah", "Charlotte", "Lucas", "Mia", "Mason", "Amelia", "Ethan", "Harper", "Evelyn", "Logan",
-  "Abigail", "Daniel", "Emily", "Jacob", "Ella", "Jackson", "Elizabeth", "Levi", "Camila", "Sebastian",
-  "Sienna", "Mateo", "Scarlett", "Jack", "Victoria", "Owen", "Madison", "Theodore", "Luna", "Aiden",
-  "Grace", "Samuel", "Chloe", "Joseph", "Penelope", "John", "Layla", "David", "Riley", "Wyatt"
+  "Adrian", "Brianna", "Caleb", "Delilah", "Ezra", "Freya", "Gavin", "Hazel", "Ian", "Jasmine",
+  "Kai", "Leilani", "Miles", "Nora", "Oscar", "Piper", "Quinn", "Rowan", "Stella", "Tristan",
+  "Uriah", "Violet", "Weston", "Ximena", "Yusuf", "Zoe", "Asher", "Brooke", "Colton", "Dahlia",
+  "Emmett", "Fiona", "Graham", "Hadley", "Isaiah", "Juliet", "Kaden", "Lyla", "Milo", "Nina",
+  "Orion", "Paige", "Ryder", "Sienna", "Tate", "Vera", "Xander", "Zara", "Holden", "Gemma"
 ];
 
-const lastInitials = ["A.", "C.", "E.", "G.", "H.", "K.", "N.", "O.", "R.", "S.", "T.", "U.", "W.", "Y.", "Z."];
+const lastInitials = ["B.", "D.", "F.", "H.", "J.", "L.", "M.", "P.", "Q.", "V.", "X.", "Z.", "K.", "N.", "R."];
 
 const actions = [
-  "just claimed a $750 Costco card!",
-  "just claimed a $750 Costco voucher!",
+  "just claimed a $250 Build-A-Bear card!",
+  "just claimed a $250 Build-A-Bear voucher!",
   "just unlocked reward eligibility!",
   "just completed the review survey!",
   "just verified eligibility!"
@@ -108,7 +109,7 @@ export default function AnnouncementBar() {
         </div>
       </div>
 
-      {/* Floating Social Proof Toast - Anchored top below banner so it never covers bottom CTA button */}
+      {/* Floating Social Proof Toast - Anchored top below banner */}
       {currentNotif && (
         <div
           className={`fixed top-14 left-3 right-3 sm:left-4 sm:right-auto z-[9999] max-w-[340px] mx-auto sm:mx-0 flex items-center gap-2 rounded-full border border-gray-200/90 bg-white/98 backdrop-blur-md px-3 py-1.5 shadow-md overflow-hidden transition-all duration-300 ease-in-out pointer-events-none ${
