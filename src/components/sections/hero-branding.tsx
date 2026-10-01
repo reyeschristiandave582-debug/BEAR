@@ -1,81 +1,87 @@
 "use client";
 
 import React from 'react';
-import { Gift, Sparkles } from 'lucide-react';
+import { Gift } from 'lucide-react';
 
-const CRUMBL_URL = "https://giftclick.org/aff_c?offer_id=4664&aff_id=200438&source=BEAR";
+const BEAR_URL = "https://giftclick.org/aff_c?offer_id=4664&aff_id=200438&source=BEAR";
 
 const HeroBranding = () => {
-  return (
-<div className="relative z-10 max-w-[512px] mx-auto px-4 pt-0 pb-0 text-center -mt-2">
-{/* Brand Header Marquee */}
-    <div 
-      className="mb-1 overflow-hidden relative cursor-pointer"
-      onClick={() => window.parent.postMessage({ type: "OPEN_EXTERNAL_URL", data: { url: CRUMBL_URL } }, "*")}
-    >
-      <div className="flex animate-marquee whitespace-nowrap min-w-full will-change-transform">
-        {[...Array(10)].map((_, i) => (
-          <div key={i} className="flex items-center mx-4">
-            <img 
-              src="https://i.imgur.com/Quntd7A.png" 
-              alt="Crumbl Cookies Logo" 
-              className="h-8 sm:h-10 w-auto object-contain"
-            />
-          </div>
-        ))}
-        {[...Array(10)].map((_, i) => (
-          <div key={`dup-${i}`} className="flex items-center mx-4">
-            <img 
-              src="https://i.imgur.com/Quntd7A.png" 
-              alt="Crumbl Cookies Logo" 
-              className="h-8 sm:h-10 w-auto object-contain"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+  const handleClick = () => {
+    if (typeof window !== 'undefined' && window.parent) {
+      window.parent.postMessage({ type: "OPEN_EXTERNAL_URL", data: { url: BEAR_URL } }, "*");
+    }
+  };
 
-    {/* Gift Card Visual */}
-    <div 
-      className="relative mb-1 group cursor-pointer"
-      onClick={() => window.parent.postMessage({ type: "OPEN_EXTERNAL_URL", data: { url: CRUMBL_URL } }, "*")}
-    >
-      <div className="relative inline-block animate-float will-change-transform">
-            {/* Main Card Image */}
-            <div className="relative z-10 w-[240px] sm:w-[320px] mx-auto transition-transform duration-500 group-hover:scale-105">
+  return (
+    <div className="relative z-10 max-w-[512px] mx-auto px-4 pt-0 pb-0 text-center -mt-2">
+      {/* Brand Header Marquee */}
+      <div 
+        className="mb-1 overflow-hidden relative cursor-pointer"
+        onClick={handleClick}
+      >
+        <div className="flex animate-marquee whitespace-nowrap min-w-full will-change-transform">
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="flex items-center mx-4">
               <img 
-                src="https://i.imgur.com/VmyW8xx.jpeg" 
-                alt="T-Mobile $250 Gift Card" 
-                className="w-full h-auto"
+                src="https://i.imgur.com/PYS9voZ.png" 
+                alt="Build-A-Bear Workshop Logo" 
+                className="h-8 sm:h-10 w-auto object-contain"
               />
-              
-                {/* Interactive Shine */}
-                <div className="absolute inset-0 rounded-[1.5rem] overflow-hidden pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine"></div>
-                </div>
+            </div>
+          ))}
+          {[...Array(10)].map((_, i) => (
+            <div key={`dup-${i}`} className="flex items-center mx-4">
+              <img 
+                src="https://i.imgur.com/PYS9voZ.png" 
+                alt="Build-A-Bear Workshop Logo" 
+                className="h-8 sm:h-10 w-auto object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Gift Card Visual */}
+      <div 
+        className="relative mb-1 group cursor-pointer"
+        onClick={handleClick}
+      >
+        <div className="relative inline-block animate-float will-change-transform">
+          {/* Main Card Image */}
+          <div className="relative z-10 w-[240px] sm:w-[320px] mx-auto transition-transform duration-500 group-hover:scale-105">
+            <img 
+              src="https://i.imgur.com/VmyW8xx.jpeg" 
+              alt="Build-A-Bear $250 Gift Card" 
+              className="w-full h-auto rounded-2xl shadow-lg border border-purple-900/10"
+            />
+            
+            {/* Interactive Shine */}
+            <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine" />
             </div>
           </div>
         </div>
+      </div>
 
-          {/* Main Headline */}
-        <div className="flex flex-col items-center gap-0.5 px-2">
+      {/* Main Headline */}
+      <div className="flex flex-col items-center gap-0.5 px-2">
         <div className="relative">
-            <h1 className="text-[22px] md:text-[28px] font-extrabold leading-tight tracking-tight flex items-center justify-center gap-x-2 flex-wrap font-poppins">
-            <span className="text-[#0055A5]">Unlock</span>
-            <span className="text-[#0055A5]">Build-A-Bear</span>
+          <h1 className="text-[22px] md:text-[28px] font-extrabold leading-tight tracking-tight flex items-center justify-center gap-x-2 flex-wrap font-poppins">
+            <span className="text-[#2d124d]">Unlock</span>
+            <span className="text-[#005dab]">Build-A-Bear</span>
             <div className="flex items-center -ml-1">
-              <Gift className="w-6.0 h-6.0 text-[#ffc220] fill-transparent" />
+              <Gift className="w-6 h-6 text-orange-500 fill-orange-500/20" />
             </div>
           </h1>
         </div>
         
-        {/* Sub-headline */}
-        <div className="flex items-center justify-center gap-2 w-full text-center">
-          <Sparkles className="w-3.5 h-3.5 text-[#ffc220] shrink-0 animate-sparkle" />
-          <p className="text-[13px] sm:text-sm md:text-[15px] text-[#0e100f]/90 font-medium leading-relaxed whitespace-nowrap font-poppins">
-            Here&apos;s how to qualify for a <span className="text-[#000001] font-bold">$250 gift card</span>
+        {/* Sub-headline with Pumpkin Halloween Accents */}
+        <div className="flex items-center justify-center gap-1.5 w-full text-center">
+          <span className="text-sm select-none">🎃</span>
+          <p className="text-[13px] sm:text-sm md:text-[15px] text-slate-700 font-medium leading-relaxed whitespace-nowrap font-poppins">
+            Here&apos;s how to qualify for a <span className="text-orange-600 font-bold">$250 gift card</span>
           </p>
-          <Sparkles className="w-3.5 h-3.5 text-[#ffc220] shrink-0 animate-sparkle" />
+          <span className="text-sm select-none">🎃</span>
         </div>
       </div>
     </div>
