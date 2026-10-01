@@ -27,7 +27,7 @@ const steps: Step[] = [
   {
     number: 4,
     title: "Claim your reward",
-    subtitle: "Receive your $750 Costco reward once verified",
+    subtitle: "Receive your $250 Build-A-Bear reward once verified",
   },
 ];
 
