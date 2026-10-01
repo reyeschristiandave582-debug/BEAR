@@ -62,13 +62,13 @@ export default function AnnouncementBar() {
 
   return (
     <>
-      {/* Top Banner Bar - Rich Purple Header with Vibrant White/Orange Text */}
+      {/* Top Banner Bar - Rich Spooky Purple Header with Clear Readability */}
       <div 
-        className="sticky top-0 z-50 w-full bg-[#2d124d] border-b border-orange-500/40 pb-2.5 px-3 sm:px-4 shadow-md"
-        style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 12px)" }}
+        className="sticky top-0 z-50 w-full bg-[#2d124d] border-b border-orange-500/40 py-2.5 px-3 sm:px-4 shadow-md"
+        style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 10px)" }}
       >
         {/* Background Floating Spooky Icons */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-40">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
           <Ghost 
             className="absolute left-[3%] sm:left-[7%] top-1/2 -translate-y-1/2 w-4 h-4 text-purple-300 animate-bounce" 
             strokeWidth={2}
@@ -83,26 +83,26 @@ export default function AnnouncementBar() {
         <div className="relative z-10 flex flex-col items-center justify-center max-w-xl mx-auto space-y-1">
           {/* Main Security Headline */}
           <div className="flex items-center justify-center gap-1.5 w-full text-center">
-            <Lock className="w-3.5 h-3.5 text-orange-400 shrink-0" strokeWidth={2.5} />
+            <Lock className="w-3.5 h-3.5 text-orange-400 shrink-0 -mt-0.5" strokeWidth={2.5} />
             <p className="text-white text-[11px] xs:text-[12px] sm:text-[13px] font-bold tracking-tight leading-none">
               256-Bit SSL Secured &bull; Over 1,400+ verified today
             </p>
           </div>
 
-          {/* Subtext Badges */}
+          {/* Subtext Trust Badges */}
           <div className="flex items-center justify-center gap-2 text-white/90">
-            <span className="text-[8.5px] xs:text-[9px] sm:text-[9.5px] uppercase tracking-wider font-extrabold text-orange-300">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-wider font-extrabold text-orange-300">
               SECURE ELIGIBILITY CHECK
             </span>
             <span className="text-orange-400/60 text-[9px]">&bull;</span>
-            <div className="flex items-center gap-1 text-[8.5px] xs:text-[9px] sm:text-[9.5px] font-extrabold text-emerald-300">
+            <div className="flex items-center gap-1 text-[9px] sm:text-[10px] font-extrabold text-emerald-300">
               <ShieldCheck className="w-3 h-3 text-emerald-400" strokeWidth={2.5} />
               <span className="uppercase tracking-wider">PRIVACY PROTECTED</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Orange Accent Line */}
+        {/* Bottom Glowing Accent Line */}
         <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent w-full opacity-90 overflow-hidden">
           <div className="absolute inset-0 bg-orange-300 animate-shine"></div>
         </div>
