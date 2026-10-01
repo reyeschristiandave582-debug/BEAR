@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Lock, Check, ShieldCheck, Ghost, Flame } from "lucide-react";
+import { Check, Ghost, Flame } from "lucide-react";
 
 interface NotificationItem {
   name: string;
@@ -62,9 +62,9 @@ export default function AnnouncementBar() {
 
   return (
     <>
-      {/* Top Banner Bar - Rich Spooky Purple Header with Clear Readability */}
+      {/* Top Banner Bar Container */}
       <div 
-        className="sticky top-0 z-50 w-full bg-[#2d124d] border-b border-orange-500/40 py-2.5 px-3 sm:px-4 shadow-md"
+        className="sticky top-0 z-50 w-full bg-[#2d124d] border-b border-orange-500/40 py-2.5 px-3 sm:px-4 shadow-md min-h-[44px]"
         style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 10px)" }}
       >
         {/* Background Floating Spooky Icons */}
@@ -77,29 +77,6 @@ export default function AnnouncementBar() {
             className="absolute right-[3%] sm:right-[7%] top-1/2 -translate-y-1/2 w-4 h-4 text-orange-400 animate-pulse" 
             strokeWidth={2}
           />
-        </div>
-
-        {/* Content Stack */}
-        <div className="relative z-10 flex flex-col items-center justify-center max-w-xl mx-auto space-y-1">
-          {/* Main Security Headline */}
-          <div className="flex items-center justify-center gap-1.5 w-full text-center">
-            <Lock className="w-3.5 h-3.5 text-orange-400 shrink-0 -mt-0.5" strokeWidth={2.5} />
-            <p className="text-white text-[11px] xs:text-[12px] sm:text-[13px] font-bold tracking-tight leading-none">
-              256-Bit SSL Secured &bull; Over 1,400+ verified today
-            </p>
-          </div>
-
-          {/* Subtext Trust Badges */}
-          <div className="flex items-center justify-center gap-2 text-white/90">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-wider font-extrabold text-orange-300">
-              SECURE ELIGIBILITY CHECK
-            </span>
-            <span className="text-orange-400/60 text-[9px]">&bull;</span>
-            <div className="flex items-center gap-1 text-[9px] sm:text-[10px] font-extrabold text-emerald-300">
-              <ShieldCheck className="w-3 h-3 text-emerald-400" strokeWidth={2.5} />
-              <span className="uppercase tracking-wider">PRIVACY PROTECTED</span>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Glowing Accent Line */}
