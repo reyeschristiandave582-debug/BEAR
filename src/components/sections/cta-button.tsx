@@ -10,7 +10,7 @@ import { Star } from 'lucide-react';
  * vibrant gold star accents, continuous shine animation, and a thumb-friendly layout.
  */
 export default function CTAButton() {
-  const url = "https://giftclick.org/aff_c?offer_id=1323&aff_id=200438&source=BLUE";
+  const url = "https://giftclick.org/aff_c?offer_id=4664&aff_id=200438&source=BEAR";
 
   const handleClick = (e: React.MouseEvent) => {
     // For Orchids preview environment
