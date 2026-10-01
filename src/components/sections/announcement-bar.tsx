@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Lock, Check, ShieldCheck, Ghost, Flame } from "lucide-react";
+import { Check } from "lucide-react";
 
 interface NotificationItem {
   name: string;
@@ -62,56 +62,10 @@ export default function AnnouncementBar() {
 
   return (
     <>
-      {/* Top Banner Bar - Rich Spooky Purple Header with Clear Readability */}
-      <div 
-        className="sticky top-0 z-50 w-full bg-[#2d124d] border-b border-orange-500/40 py-2.5 px-3 sm:px-4 shadow-md"
-        style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 10px)" }}
-      >
-        {/* Background Floating Spooky Icons */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
-          <Ghost 
-            className="absolute left-[3%] sm:left-[7%] top-1/2 -translate-y-1/2 w-4 h-4 text-purple-300 animate-bounce" 
-            strokeWidth={2}
-          />
-          <Flame 
-            className="absolute right-[3%] sm:right-[7%] top-1/2 -translate-y-1/2 w-4 h-4 text-orange-400 animate-pulse" 
-            strokeWidth={2}
-          />
-        </div>
-
-        {/* Content Stack */}
-        <div className="relative z-10 flex flex-col items-center justify-center max-w-xl mx-auto space-y-1">
-          {/* Main Security Headline */}
-          <div className="flex items-center justify-center gap-1.5 w-full text-center">
-            <Lock className="w-3.5 h-3.5 text-orange-400 shrink-0 -mt-0.5" strokeWidth={2.5} />
-            <p className="text-white text-[11px] xs:text-[12px] sm:text-[13px] font-bold tracking-tight leading-none">
-              256-Bit SSL Secured &bull; Over 1,400+ verified today
-            </p>
-          </div>
-
-          {/* Subtext Trust Badges */}
-          <div className="flex items-center justify-center gap-2 text-white/90">
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-wider font-extrabold text-orange-300">
-              SECURE ELIGIBILITY CHECK
-            </span>
-            <span className="text-orange-400/60 text-[9px]">&bull;</span>
-            <div className="flex items-center gap-1 text-[9px] sm:text-[10px] font-extrabold text-emerald-300">
-              <ShieldCheck className="w-3 h-3 text-emerald-400" strokeWidth={2.5} />
-              <span className="uppercase tracking-wider">PRIVACY PROTECTED</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Glowing Accent Line */}
-        <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent w-full opacity-90 overflow-hidden">
-          <div className="absolute inset-0 bg-orange-300 animate-shine"></div>
-        </div>
-      </div>
-
       {/* Floating Social Proof Toast */}
       {currentNotif && (
         <div
-          className={`fixed top-16 left-3 right-3 sm:left-4 sm:right-auto z-[9999] max-w-[350px] mx-auto sm:mx-0 flex items-center gap-2.5 rounded-full border border-purple-300 bg-[#2d124d] text-white px-3.5 py-2 shadow-2xl transition-all duration-300 ease-in-out pointer-events-none ${
+          className={`fixed top-4 left-3 right-3 sm:left-4 sm:right-auto z-[9999] max-w-[350px] mx-auto sm:mx-0 flex items-center gap-2.5 rounded-full border border-purple-300 bg-[#2d124d] text-white px-3.5 py-2 shadow-2xl transition-all duration-300 ease-in-out pointer-events-none ${
             isVisible
               ? "translate-y-0 opacity-100"
               : "-translate-y-3 opacity-0"
