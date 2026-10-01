@@ -1,31 +1,31 @@
 import React from 'react';
-import { Star, Sparkles, Heart, Gift } from 'lucide-react';
+import { Ghost, Pumpkin, Skull, Spider, Wand2, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
 const AnimatedBackground = () => {
   return (
     <>
-      {/* Central Mask - keeps center clean so background graphics never obscure text */}
+      {/* Central Mask - Spooky Dark Midnight Vignette */}
       <div 
         className="fixed inset-0 pointer-events-none z-0"
         style={{
-          background: 'radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 45%, rgba(255,255,255,0) 80%)'
+          background: 'radial-gradient(circle at center, rgba(18,7,31,0.92) 0%, rgba(13,5,22,0.97) 50%, rgba(8,2,14,1) 100%)'
         }}
       />
 
-      {/* Vector Icon Overlays */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-10 z-0">
-        <Heart className="absolute top-16 left-3 w-6 h-6 text-premium-green animate-rotate-slow" />
-        <Star className="absolute top-44 left-4 w-6 h-6 text-premium-gold animate-float-spin" />
-        <Sparkles className="absolute top-28 right-4 w-6 h-6 text-premium-gold animate-twinkle" />
-        <Gift className="absolute bottom-36 left-4 w-6 h-6 text-premium-green animate-rotate-reverse" />
-        <Star className="absolute bottom-52 right-4 w-6 h-6 text-premium-gold animate-float-gentle" />
-        <Heart className="absolute top-[60%] left-2 w-6 h-6 text-premium-green animate-rotate-slow" />
-        <Sparkles className="absolute top-[40%] right-3 w-6 h-6 text-premium-gold animate-float-spin" />
+      {/* Vector Icon Overlays - Spooky Floating Halloween Elements */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-25 z-0">
+        <Ghost className="absolute top-16 left-3 w-6 h-6 text-purple-300 animate-rotate-slow" />
+        <Pumpkin className="absolute top-44 left-4 w-6 h-6 text-orange-400 animate-float-spin" />
+        <Sparkles className="absolute top-28 right-4 w-6 h-6 text-amber-300 animate-twinkle" />
+        <Skull className="absolute bottom-36 left-4 w-6 h-6 text-purple-200 animate-rotate-reverse" />
+        <Spider className="absolute bottom-52 right-4 w-6 h-6 text-orange-500 animate-float-gentle" />
+        <Wand2 className="absolute top-[60%] left-2 w-6 h-6 text-amber-400 animate-rotate-slow" />
+        <Ghost className="absolute top-[40%] right-3 w-6 h-6 text-purple-300 animate-float-spin" />
       </div>
 
-      {/* Image Overlays - Pushed to extreme edges with low opacity */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.08] z-0">
+      {/* Image Overlays - Edge Elements */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-[0.12] z-0">
         <Image
           src="https://i.imgur.com/PYS9voZ.png"
           alt=""
